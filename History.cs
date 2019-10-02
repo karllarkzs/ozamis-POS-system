@@ -196,7 +196,41 @@ namespace Cashier
                     }
                 }
             }
-            catch (Exception ee) { MessageBox.Show(ee.ToString()); }
+            catch (Exception ee) {  try
+            {
+                //datagridOrders.Enabled = true;
+                //panel5.SendToBack();
+                MySqlConnection connection = new MySqlConnection(myConnectionString);
+                connection.Open();
+                MySqlCommand command = connection.CreateCommand();
+                command.Connection = connection;
+                string query = "SELECT * FROM receipts";
+                command.CommandText = query;
+                command.ExecuteNonQuery();
+                connection.Close();
+                //txtsub.Text = "₱0";
+                //lbldate.Text = "";
+                using (MySqlDataAdapter adapter = new MySqlDataAdapter(query, myConnectionString))
+                {
+                    DataSet ds = new DataSet();
+                    adapter.Fill(ds);
+
+                    //datagridOrders.DataBindings.Clear();
+                    datagridOrders.Rows.Clear();
+                    //label2.Text = s;
+                    //lbldate.Text = ds.Tables[0].Rows[0].ItemArray[9].ToString();
+                    for (int x = 0; x < ds.Tables[0].Rows.Count; x++)
+                    {
+                        datagridOrders.Rows.Add(float.Parse(ds.Tables[0].Rows[x].ItemArray[0].ToString()), float.Parse(ds.Tables[0].Rows[x].ItemArray[1].ToString()), float.Parse(ds.Tables[0].Rows[x].ItemArray[2].ToString()), float.Parse(ds.Tables[0].Rows[x].ItemArray[3].ToString()), float.Parse(ds.Tables[0].Rows[x].ItemArray[4].ToString()), ds.Tables[0].Rows[x].ItemArray[5], ds.Tables[0].Rows[x].ItemArray[7], ds.Tables[0].Rows[x].ItemArray[8], ds.Tables[0].Rows[x].ItemArray[9].ToString(), ds.Tables[0].Rows[x].ItemArray[10].ToString());
+                        txttotal.Text = (float.Parse(txttotal.Text.ToString(), System.Globalization.NumberStyles.Currency) + float.Parse(ds.Tables[0].Rows[x].ItemArray[2].ToString())).ToString("C2");
+                        //MessageBox.Show(txttotal.Text);
+                    }
+                } }
+               
+                 catch (Exception ee)
+                {
+                    MessageBox.Show(ee.ToString());
+                }
 
         }
 
