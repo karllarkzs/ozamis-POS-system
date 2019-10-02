@@ -98,6 +98,12 @@ namespace Cashier
                         txtpass.Text = "";
                         //MessageBox.Show(ds.Tables[0].Rows[0].ItemArray[0].ToString() + " " + ds.Tables[0].Rows[0].ItemArray[1].ToString()); 
                     }
+                      else
+                    {
+                        MessageBox.Show("Contant ADMIN");
+                        txtcashier.Text = "";
+                        txtpass.Text = "";
+                        //Mess
 
                 }
             }
