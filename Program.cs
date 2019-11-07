@@ -19,4 +19,7 @@ namespace Cashier
             Application.Run(new Form1());
         }
     }
+
 }
+
+///karl and earl's first freelance project:
