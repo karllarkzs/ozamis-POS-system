@@ -37,6 +37,14 @@ namespace Cashier
             InitializeComponent();
             
         }
+ string myConnectionString = "server=localhost; uid=root; pwd=; database=menu";
+        public Form1()
+        {
+            InitializeComponent();
+            txtuser.Focus();
+
+        }
+
 
 
         private void monthCalendar1_DateChanged(object sender, DateRangeEventArgs e)
