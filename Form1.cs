@@ -33,6 +33,14 @@ namespace Cashier
             txtuser.Focus();
 
         }
+ string myConnectionString = "server=localhost; uid=root; pwd=; database=menu";
+        public Form1()
+        {
+            InitializeComponent();
+            txtuser.Focus();
+
+        }
+
 
         private void Form1_Load(object sender, EventArgs e)
         {
