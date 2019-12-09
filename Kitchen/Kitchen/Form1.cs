@@ -64,8 +64,8 @@ namespace Kitchen
                 this.labelq.Text = text;
             }
         }
-
-        delegate void SetTextCallback2(string text);
+       delegate void SetTextCallback2(string text);
+ delegate void SetTextCallback2(string text);
 
         private void SetText2(string text)
         {
