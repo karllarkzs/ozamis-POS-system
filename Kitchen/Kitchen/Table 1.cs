@@ -20,6 +20,8 @@ namespace Kitchen
         //string myConnectionString = "server=192.168.15.6; uid=root; pwd=; database=menu";
         //string myConnectionString = "server=localhost; uid=root; pwd=; database=menu";
         
+  //string myConnectionString = "server=192.168.15.6; uid=root; pwd=; database=menu";
+        //string myConnectionString = "server=localhost; uid=root; pwd=; database=menu";
         //string myConnectionString = "server=192.168.15.6; uid=root; pwd=; database=menu";
         //string myConnectionString = "server=localhost; uid=root; pwd=; database=menu";
  string myConnectionString = "server=localhost; uid=root; pwd=; database=menu";

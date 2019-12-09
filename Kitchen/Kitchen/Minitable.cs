@@ -38,6 +38,13 @@ namespace Kitchen
 
         private void Minitable_Load(object sender, EventArgs e)
         {
+ string myConnectionString = "server=192.168.0.105; uid=roota; pwd=; database=menu";
+        public Minitable()
+        {
+            InitializeComponent();
+        }
+
+        private void Minitable_Load(object sender, EventArgs e)
            
             loadGrid();
         }
