@@ -66,6 +66,7 @@ namespace Kitchen
 
 
         public void zee()
+        delegate void SetTextCallback(string text);
         {
             try
             {
