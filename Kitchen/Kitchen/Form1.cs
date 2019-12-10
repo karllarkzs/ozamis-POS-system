@@ -11,9 +11,7 @@ using MySql.Data.MySqlClient;
 using System.Threading;
 
 namespace Kitchen
-{
     public partial class Form1 : Form
-    {
        //string myConnectionString = "server=192.168.15.6; uid=root; pwd=; database=menu";
         //string myConnectionString = "server=localhost; uid=root; pwd=; database=menu";
         
@@ -68,6 +66,19 @@ namespace Kitchen
  delegate void SetTextCallback2(string text);
 
         private void SetText2(string text)
+        {
+
+            if (this.orderid.InvokeRequired)
+            {
+                SetTextCallback2 d = new SetTextCallback2(SetText2);
+                this.Invoke(d, new object[] { text });
+            }
+            else
+            {
+                this.orderid.Text = text;
+            }
+        }
+        private void SetText2(string text)
         {
 
             if (this.orderid.InvokeRequired)
