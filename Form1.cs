@@ -13,17 +13,6 @@ namespace Cashier
 {
     public partial class Form1 : Form
     {
-        //string myConnectionString = "server=192.168.15.8; uid=root; pwd=; database=menu";
-        //string myConnectionString = "server=192.168.0.105; uid=roota; pwd=; database=menu";
-        
-        //string myConnectionString = "server=192.168.15.6; uid=root; pwd=; database=menu";
-        //string myConnectionString = "server=localhost; uid=root; pwd=; database=menu";
-      //string myConnectionString = "server=192.168.15.8; uid=root; pwd=; database=menu";
-        //string myConnectionString = "server=192.168.0.105; uid=roota; pwd=; database=menu";
-        
-        //string myConnectionString = "server=192.168.15.6; uid=root; pwd=; database=menu";
-        //string myConnectionString = "server=localhost; uid=root; pwd=; database=menu";
-
 
         string myConnectionString = "server=localhost; uid=root; pwd=; database=menu";
         public Form1()
