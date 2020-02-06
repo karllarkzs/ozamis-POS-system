@@ -1,4 +1,4 @@
-# ozamiss
+# ozamis
 
 
 # overall system
